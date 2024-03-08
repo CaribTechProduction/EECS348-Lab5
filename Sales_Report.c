@@ -9,10 +9,10 @@ void generate_sales_report(float sales_data[])
 
     // Sales report
     printf("Monthly sales report for 2022:\n");
-    printf("Month\tSales\n");
+    printf("Month\t\tSales\n");
     for (int i = 0; i < MONTHS; i++)
     {
-        printf("%s\t$%.2f\n", months[i], sales_data[i]);
+        printf("%s\t\t$%.2f\n", months[i], sales_data[i]);
     }
 
     // Sales summary
@@ -32,9 +32,9 @@ void generate_sales_report(float sales_data[])
         total_sales += sales_data[i];
     }
     printf("\nSales summary:\n");
-    printf("Minimum sales: $%.2f (%s)\n", min_sales, months[0]);
-    printf("Maximum sales: $%.2f (%s)\n", max_sales, months[MONTHS - 1]);
-    printf("Average sales: $%.2f\n", total_sales / MONTHS);
+    printf("Minimum sales: \t\t$%.2f\t (%s)\n", min_sales, months[0]);
+    printf("Maximum sales: \t\t$%.2f\t (%s)\n", max_sales, months[MONTHS - 1]);
+    printf("Average sales: \t\t$%.2f\n", total_sales / MONTHS);
 
     // Six-month moving averages
     printf("\nSix-Month Moving Average Report:\n");
@@ -45,7 +45,7 @@ void generate_sales_report(float sales_data[])
         {
             sum += sales_data[j];
         }
-        printf("%s - %s $%.2f\n", months[i], months[i + 5], sum / 6);
+        printf("%s\t - %s\t $%.2f\n", months[i], months[i + 5], sum / 6);
     }
 
     // Sales report (Highest to Lowest)
@@ -65,10 +65,10 @@ void generate_sales_report(float sales_data[])
         }
     }
     printf("\nSales Report (Highest to Lowest):\n");
-    printf("Month\tSales\n");
+    printf("Month\t\tSales\n");
     for (int i = 0; i < MONTHS; i++)
     {
-        printf("%s\t$%.2f\n", months[i], sales_data[i]);
+        printf("%s\t\t$%.2f\n", months[i], sales_data[i]);
     }
 }
 
